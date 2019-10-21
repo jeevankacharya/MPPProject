@@ -6,6 +6,12 @@ public class Item {
     private String name;
     private double price;
 
+    public Item(int itemId, String name, double price) {
+        this.itemId = itemId;
+        this.name = name;
+        this.price = price;
+    }
+
     public double getPrice() {
         return price;
     }
@@ -28,5 +34,9 @@ public class Item {
 
     public void setItemId(int itemId) {
         this.itemId = itemId;
+    }
+
+    public String toString() {
+        return "item_id : " + itemId + "  name: " + name + " price : " + price + "\n";
     }
 }

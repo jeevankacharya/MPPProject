@@ -2,16 +2,24 @@ package org.mppproject.entity;
 
 public class Salesman {
 
-    private String salesmanId;
+    private int salesmanId;
     private String name;
     private String city;
-    private String commission;
+    private double commission;
 
-    public String getSalesmanId() {
+    public Salesman(int salesmanId, String name, String city, double commission) {
+        this.salesmanId = salesmanId;
+        this.name = name;
+        this.city = city;
+        this.commission = commission;
+    }
+
+
+    public int getSalesmanId() {
         return salesmanId;
     }
 
-    public void setSalesmanId(String salesmanId) {
+    public void setSalesmanId(int salesmanId) {
         this.salesmanId = salesmanId;
     }
 
@@ -31,11 +39,11 @@ public class Salesman {
         this.city = city;
     }
 
-    public String getCommission() {
+    public double getCommission() {
         return commission;
     }
 
-    public void setCommission(String commission) {
+    public void setCommission(double commission) {
         this.commission = commission;
     }
 }

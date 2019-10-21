@@ -5,12 +5,23 @@ import java.util.List;
 
 public class Order {
 
-    private String order_No;
-    private String orderDate;
-    private String customerId;
-    private String salesmanId;
+    private int order_No;
+    private int customerId;
+    private int salesmanId;
     private LocalDate localDate;
     private List<Item> orderItems;
+
+    public Order(int order_no, int customerId, int salesmanId, LocalDate localDate, List<Item> orderItems) {
+        order_No = order_no;
+        this.customerId = customerId;
+        this.salesmanId = salesmanId;
+        this.localDate = localDate;
+        this.orderItems = orderItems;
+    }
+
+    public LocalDate getLocalDate() {
+        return localDate;
+    }
 
     public List<Item> getOrderItems() {
         return orderItems;
@@ -20,43 +31,27 @@ public class Order {
         this.orderItems = orderItems;
     }
 
-    public LocalDate getLocalDate() {
-        return localDate;
-    }
-
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
-    }
-
-    public String getSalesmanId() {
+    public int getSalesmanId() {
         return salesmanId;
     }
 
-    public void setSalesmanId(String salesmanId) {
+    public void setSalesmanId(int salesmanId) {
         this.salesmanId = salesmanId;
     }
 
-    public String getCustomerId() {
+    public int getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 
-    public String getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(String orderDate) {
-        this.orderDate = orderDate;
-    }
-
-    public String getOrder_No() {
+    public int getOrder_No() {
         return order_No;
     }
 
-    public void setOrder_No(String order_No) {
+    public void setOrder_No(int order_No) {
         this.order_No = order_No;
     }
 }
