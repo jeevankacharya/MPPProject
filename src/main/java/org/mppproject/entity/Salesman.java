@@ -46,4 +46,9 @@ public class Salesman {
     public void setCommission(double commission) {
         this.commission = commission;
     }
+
+    @Override
+    public String toString() {
+        return "SalesmanId : " + salesmanId + "  name :" + name + " city : " + city + " commission : " + commission + "\n";
+    }
 }

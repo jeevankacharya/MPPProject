@@ -6,14 +6,14 @@ public class Customer {
     private String name;
     private String city;
     private String grade;
-    private int salesmanId;
+    private Salesman salesman;
 
-    public Customer(int customerId, String name, String city, String grade, int salesmanId) {
+    public Customer(int customerId, String name, String city, String grade, Salesman salesman) {
         this.customerId = customerId;
         this.name = name;
         this.city = city;
         this.grade = grade;
-        this.salesmanId = salesmanId;
+        this.salesman = salesman;
     }
 
     public int getCustomerId() {
@@ -48,17 +48,18 @@ public class Customer {
         this.grade = grade;
     }
 
-    public int getSalesmanId() {
-        return salesmanId;
+    public Salesman getSalesman() {
+        return salesman;
     }
 
-    public void setSalesmanId(int salesmanId) {
-        this.salesmanId = salesmanId;
+    public void setSalesman(Salesman salesman) {
+        this.salesman = salesman;
     }
+
 
     @Override
     public String toString() {
 
-        return "customer_id : " + customerId + "  name : " + name + "  city : " + city + "  salesman_id : " + salesmanId+"\n";
+        return "customer_id : " + customerId + "  name : " + name + "  city : " + city + "  salesman_id : " + salesman + "\n";
     }
 }
