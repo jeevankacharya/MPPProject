@@ -1,5 +1,8 @@
 package org.mppproject.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Customer {
 
     private int customerId;
@@ -7,6 +10,7 @@ public class Customer {
     private String city;
     private String grade;
     private Salesman salesman;
+
 
     public Customer(int customerId, String name, String city, String grade, Salesman salesman) {
         this.customerId = customerId;
@@ -62,4 +66,5 @@ public class Customer {
 
         return "customer_id : " + customerId + "  name : " + name + "  city : " + city + "  salesman_id : " + salesman + "\n";
     }
+
 }

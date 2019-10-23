@@ -26,13 +26,13 @@ public class Main {
 
     private static Item item1 = new Item(1001, "Noodles", 20);
     private static Item item2 = new Item(1002, "Noodles", 10);
-    private static Item item3 = new Item(1003, "Noodles", 5);
-    private static Item item4 = new Item(1004, "Noodles", 50);
-    private static Item item5 = new Item(1005, "Noodles", 80);
-    private static Item item6 = new Item(1006, "Noodles", 70);
-    private static Item item7 = new Item(1007, "Noodles", 60);
-    private static Item item8 = new Item(1008, "Noodles", 30);
-    private static Item item9 = new Item(1009, "Noodles", 12);
+    private static Item item3 = new Item(1003, "Pizza", 5);
+    private static Item item4 = new Item(1004, "Clothes", 50);
+    private static Item item5 = new Item(1005, "Laptop", 80);
+    private static Item item6 = new Item(1006, "Laptop", 70);
+    private static Item item7 = new Item(1007, "Phone", 60);
+    private static Item item8 = new Item(1008, "Charger", 30);
+    private static Item item9 = new Item(1009, "Phone", 12);
     private static Item item10 = new Item(1010, "Noodles", 5);
 
     private static List<Item> itemList1 = new ArrayList<Item>() {
@@ -122,11 +122,19 @@ public class Main {
 //    }
 
     private static void showCases() {
-        System.err.println("Enter the choice A/B");
+
+        System.out.println("----------------------------------------------------------------------------");
+        System.out.println("Enter the choice A/B/C");
+        System.out.println("----------------------------------------------------------------------------");
+
         System.out.println("A : the list of customers who appointed a salesman for their jobs who gets a commission from the company is more than 12% ");
         System.out.println("B : make a report with customer name, city, order no. order date, purchase amount for only those customers");
+        System.out.println("C : Total Price of Ordered Items");
+        System.out.println("D : List order by price and categories");
 
-        System.err.println("Enter Choice ");
+        System.out.println("----------------------------------------------------------------------------");
+
+        System.out.println("Enter Choice ");
         String choice = new Scanner(System.in).nextLine();
         switch (choice.toUpperCase()) {
 
@@ -143,6 +151,20 @@ public class Main {
                 showCases();
                 break;
 
+            case "C":
+                double sum = QueriesJeevan.getTotalOrderItemPrice(orderList);
+                System.out.println("Total Ordered Product Sum " + sum);
+
+                showCases();
+                break;
+
+
+            case "D":
+                Map<String, Set<Double>> listData = QueriesJeevan.getListPriceByProductCategories(customerList, orderList);
+                System.out.println(listData);
+            default:
+                showCases();
+                break;
         }
     }
 }
