@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.mppproject.queries.MyFunctionsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-23T22:42:10" hostname="DESKTOP-OA0MG6O" time="0.009">
+  <properties/>
+  <testcase name="testTotalItemsPrice" classname="org.mppproject.queries.MyFunctionsTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

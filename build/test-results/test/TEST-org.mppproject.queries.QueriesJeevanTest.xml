@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.mppproject.queries.QueriesJeevanTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-22T23:33:50" hostname="DESKTOP-OA0MG6O" time="0.03">
-  <properties/>
-  <testcase name="getTotalOrderProductSum" classname="org.mppproject.queries.QueriesJeevanTest" time="0.03"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

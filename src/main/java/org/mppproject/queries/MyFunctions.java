@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 public class MyFunctions {
 
+    /*return the total price for a given order*/
     public static Function<Order, Double> totalItemsPrice = order ->
             order.getOrderItems()
                     .stream()
@@ -23,6 +24,7 @@ public class MyFunctions {
                     .sum();
 
 
+    /*returns a boolean weather any item falls on that range */
     public static TriPredicate<Order, Double, Double> isBetweenAgivenRange = (order, range, range2) ->
             totalItemsPrice.apply(order) > range && totalItemsPrice.apply(order) < range2;
 
@@ -33,16 +35,28 @@ public class MyFunctions {
                             totalItemsPrice.apply(order))
                     .collect(Collectors.toList());
 
+    /*list of customers + their salesmans information*/
     public static Function<List<Customer>, List<String>> sortedCustomersAndThereSalesmen = customers ->
             customers.stream()
                     .sorted(Comparator.comparingInt(c -> c.getName().length()))
                     .map(c -> c.getCustomerId() + " " + c.getName() + " " + c.getCity() + " " + c.getSalesman().getName())
                     .collect(Collectors.toList());
 
+    public static Function<List<Order>,List<String>> listOfSalesmenWhoHaveMoreThanOneOrder = list ->
+            list.stream()
+                    .map(l->l.getSalesman())
+                    .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+                    .entrySet().stream()
+                    .filter(e-> e.getValue()>1)
+                    .sorted(Comparator.comparingInt(e -> e.getKey().getSalesmanId()))
+                    .map(e->e.getKey().getSalesmanId()+" " + e.getKey().getName())
+                    .collect(Collectors.toList());
+
     public static BiFunction<Order, Order, Boolean> sameSalesmanForDifferentCustomers = (order, order2) ->
             ((order.getCustomer().getCustomerId() != order2.getCustomer().getCustomerId()) &&
                     order.getSalesman().getSalesmanId() == order2.getSalesman().getSalesmanId());
 
+    /*salesman with customer*/
     public static BiFunction<List<Customer>, List<Salesman>, List<Salesman>> salemenWithCustomers = (customers, salesmen) ->
             salesmen.stream()
                     .filter(salesman -> customers.stream().anyMatch(customer -> customer.getSalesman().getSalesmanId() == salesman.getSalesmanId()))

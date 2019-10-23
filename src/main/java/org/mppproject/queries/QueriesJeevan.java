@@ -23,36 +23,23 @@ public class QueriesJeevan {
     // according to the order date to find that either any of the existing customers have placed no order or
     // placed one or more orders.
 
-    private static BiFunction<List<Customer>, List<Order>, List<CustomerOrder>> listBiFunction = (customers, orderList) -> {
-        List<CustomerOrder> list = new ArrayList<>();
-
-        //customers.parallelStream().filter(customer -> orderList.parallelStream().filter(order -> order.getCustomer().getCustomerId() == customer.getCustomerId()))
-
-      /*  return customers.parallelStream()
-                .filter(customer -> orderList.stream().anyMatch(order -> order.getCustomer().getCustomerId() == customer.getCustomerId()))
-                .map(customer -> {
-                    List<CustomerOrder> list1 = new ArrayList<>();
-                    list.add(new CustomerOrder(customer.getName(), customer.getCity(), order.getOrder_No(), order.getLocalDate(),
-                            order.getOrderItems(), customer.getCustomerId(), customer.getSalesman().getSalesmanId()));
-                    return list1;
-                })
-                .collect(Collectors.toList());
-*/
-        customers.parallelStream().forEach(customer -> orderList.parallelStream().forEach(order -> {
-            if (order.getCustomer().getCustomerId() == customer.getCustomerId()) {
-                list.add(new CustomerOrder(customer.getName(), customer.getCity(), order.getOrder_No(), order.getLocalDate(),
-                        order.getOrderItems(), customer.getCustomerId(), customer.getSalesman().getSalesmanId()));
-            }
-        }));
-        return list;
-    };
+//    private static BiFunction<List<Customer>, List<Order>, List<CustomerOrder>> listBiFunction = (customers, orderList) -> {
+//        List<CustomerOrder> list = new ArrayList<>();
+//        customers.parallelStream().forEach(customer -> orderList.parallelStream().forEach(order -> {
+//            if (order.getCustomer().getCustomerId() == customer.getCustomerId()) {
+//                list.add(new CustomerOrder(customer.getName(), customer.getCity(), order.getOrder_No(), order.getLocalDate(),
+//                        order.getOrderItems(), customer.getCustomerId(), customer.getSalesman().getSalesmanId()));
+//            }
+//        }));
+//        return list;
+//    };
 
 
     //make a report with customer name, city, order no. order date, purchase amount for only those customers
-
-    public static List<CustomerOrder> getCustomerOrderList(List<Customer> customerList, List<Order> orderList) {
-        return listBiFunction.apply(customerList, orderList);
-    }
+//
+//    public static List<CustomerOrder> getCustomerOrderList(List<Customer> customerList, List<Order> orderList) {
+//        return listBiFunction.apply(customerList, orderList);
+//    }
 
 
     public static Map<String, Set<Double>> getListPriceByProductCategories(List<Customer> customerList, List<Order> orderList) {
@@ -67,7 +54,7 @@ public class QueriesJeevan {
                 .mapToDouble(Item::getPrice).sum();
     }
 
-    public static BiFunction<List<Customer>, List<Order>, Map<String, Set<Double>>> ListPriceByProductCategories = ((customerList, orderList) ->
+    private static BiFunction<List<Customer>, List<Order>, Map<String, Set<Double>>> ListPriceByProductCategories = ((customerList, orderList) ->
             orderList.stream()
                     .flatMap(order -> order.getOrderItems().stream())
                     .collect(Collectors.groupingBy(Item::getName, Collectors.mapping(Item::getPrice, Collectors.toSet())))
