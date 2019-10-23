@@ -18,7 +18,7 @@ public class QueriesJeevan {
     public static List<Customer> getListOfCustomer(List<Customer> customers, List<Salesman> salesmanList) {
         return salesmanList.parallelStream()
                 .flatMap(salesman -> customers.stream().
-                        filter(customer -> customer.getSalesmanId() == salesman.getSalesmanId() && salesman.getCommission() > 0.12))
+                        filter(customer -> customer.getSalesman().getSalesmanId() == salesman.getSalesmanId() && salesman.getCommission() > 0.12))
                 .collect(Collectors.toList());
     }
 
@@ -28,21 +28,11 @@ public class QueriesJeevan {
 
     private static BiFunction<List<Customer>, List<Order>, List<CustomerOrder>> listBiFunction = (customers, orderList) -> {
         List<CustomerOrder> list = new ArrayList<>();
-//
-//     List<CustomerOrder> list1=   customers.stream().map(customer -> orderList.stream().map(order -> {
-//            List<CustomerOrder> customerOrderList = new ArrayList<>();
-//            if (order.getCustomerId() == customer.getCustomerId()) {
-//                customerOrderList.add(new CustomerOrder(customer.getName(), customer.getCity(), order.getOrder_No(), order.getLocalDate(),
-//                        order.getOrderItems(), customer.getCustomerId(), customer.getSalesmanId()));
-//            }
-//            return customerOrderList.stream();
-//        })).;
 
-
-        customers.forEach(customer -> orderList.forEach(order -> {
-            if (order.getCustomerId() == customer.getCustomerId()) {
+        customers.parallelStream().forEach(customer -> orderList.parallelStream().forEach(order -> {
+            if (order.getCustomer().getCustomerId() == customer.getCustomerId()) {
                 list.add(new CustomerOrder(customer.getName(), customer.getCity(), order.getOrder_No(), order.getLocalDate(),
-                        order.getOrderItems(), customer.getCustomerId(), customer.getSalesmanId()));
+                        order.getOrderItems(), customer.getCustomerId(), customer.getSalesman().getSalesmanId()));
             }
         }));
         return list;

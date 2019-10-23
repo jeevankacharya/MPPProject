@@ -1,12 +1,18 @@
-package org.mppproject;
+package org.mppproject.queries;
 
-import org.mppproject.entity.*;
-import org.mppproject.queries.QueriesJeevan;
+import org.junit.Test;
+import org.mppproject.entity.Customer;
+import org.mppproject.entity.Item;
+import org.mppproject.entity.Order;
+import org.mppproject.entity.Salesman;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Main {
+import static org.junit.Assert.*;
+
+public class QueriesJeevanTest {
 
     private static Salesman salesman1 = new Salesman(5001, "James Hong", "New York", 0.15);
     private static Salesman salesman2 = new Salesman(5002, "Adam BC", "London", 0.12);
@@ -110,39 +116,14 @@ public class Main {
         }
     };
 
-    public static void main(String[] args) {
+    @Test
+    public void getListOfCustomer() {
 
-        showCases();
+
     }
 
-//    public static void addDataJeevan() {
-//        System.err.println("the list of customers who appointed a salesman for their jobs who gets a commission from the company is more than 12%");
-//        /*Question 10*/
-//        System.err.println("make a report with customer name, city, order no. order date, purchase amount for only those customers");
-//    }
+    @Test
+    public void getCustomerOrderList() {
 
-    private static void showCases() {
-        System.err.println("Enter the choice A/B");
-        System.out.println("A : the list of customers who appointed a salesman for their jobs who gets a commission from the company is more than 12% ");
-        System.out.println("B : make a report with customer name, city, order no. order date, purchase amount for only those customers");
-
-        System.err.println("Enter Choice ");
-        String choice = new Scanner(System.in).nextLine();
-        switch (choice.toUpperCase()) {
-
-            case "A":
-
-                List<Customer> listCustomer = QueriesJeevan.getListOfCustomer(customerList, salesmanList);
-                System.out.println(listCustomer);
-                showCases();
-                break;
-
-            case "B":
-                List<CustomerOrder> customerOrderList = QueriesJeevan.getCustomerOrderList(customerList, orderList);
-                System.out.println(customerOrderList);
-                showCases();
-                break;
-
-        }
     }
 }

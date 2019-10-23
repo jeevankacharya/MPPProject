@@ -3,6 +3,7 @@ package org.mppproject.entity;
 import java.time.LocalDate;
 import java.util.List;
 
+/*templete model made by jeevan might not be useful for others..if found useful dont change the model properties*/
 public class CustomerOrder {
 
     //make a report with customer name, city, order number, order date, and order amount in ascending order
