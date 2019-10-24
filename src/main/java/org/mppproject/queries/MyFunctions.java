@@ -52,10 +52,6 @@ public class MyFunctions {
                     .map(e->e.getKey().getSalesmanId()+" " + e.getKey().getName())
                     .collect(Collectors.toList());
 
-    public static BiFunction<Order, Order, Boolean> sameSalesmanForDifferentCustomers = (order, order2) ->
-            ((order.getCustomer().getCustomerId() != order2.getCustomer().getCustomerId()) &&
-                    order.getSalesman().getSalesmanId() == order2.getSalesman().getSalesmanId());
-
     /*salesman with customer*/
     public static BiFunction<List<Customer>, List<Salesman>, List<Salesman>> salemenWithCustomers = (customers, salesmen) ->
             salesmen.stream()

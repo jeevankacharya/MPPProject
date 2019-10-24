@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.mppproject.queries.MyFunctionsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-24T01:03:00" hostname="hhh-SVF14213SAW" time="0.041">
+<testsuite name="org.mppproject.queries.MyFunctionsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-24T01:55:32" hostname="DESKTOP-950GC04" time="0.056">
   <properties/>
-  <testcase name="testListOfSalesmenWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.022"/>
-  <testcase name="testTotalItemsPrice" classname="org.mppproject.queries.MyFunctionsTest" time="0.003"/>
-  <testcase name="testsalemenWithCustomers" classname="org.mppproject.queries.MyFunctionsTest" time="0.005"/>
-  <testcase name="testListOfCustomersWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.001"/>
-  <testcase name="testOrderIsBetweenAgivenRange" classname="org.mppproject.queries.MyFunctionsTest" time="0.001"/>
-  <testcase name="testListOfCustomerDetailsWhoQualify" classname="org.mppproject.queries.MyFunctionsTest" time="0.004"/>
+  <testcase name="testListOfSalesmenWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.024"/>
+  <testcase name="testTotalItemsPrice" classname="org.mppproject.queries.MyFunctionsTest" time="0.011"/>
+  <testcase name="testsalemenWithCustomers" classname="org.mppproject.queries.MyFunctionsTest" time="0.01"/>
+  <testcase name="testListOfCustomersWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.0"/>
+  <testcase name="testOrderIsBetweenAgivenRange" classname="org.mppproject.queries.MyFunctionsTest" time="0.0"/>
+  <testcase name="testListOfCustomerDetailsWhoQualify" classname="org.mppproject.queries.MyFunctionsTest" time="0.005"/>
   <testcase name="testSortedCustomersAndThereSalesmen" classname="org.mppproject.queries.MyFunctionsTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

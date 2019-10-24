@@ -14,27 +14,6 @@ import java.util.stream.Collectors;
 
 public class HHHQueries {
 
-
-    @FunctionalInterface
-    public interface TriFunction<T, U, V, R> {
-        R apply(T t, U u, V v);
-    }
-
-    @FunctionalInterface
-    public interface FourFunction<A, B, C, D, R> {
-        R apply(A a, B b, C c, D d);
-    }
-
-    @FunctionalInterface
-    public interface FiveFunction<A, B, C, D, E, R> {
-        R apply(A a, B b, C c, D d, E e);
-    }
-
-    @FunctionalInterface
-    public interface SixFunction<A, B, C, D, E, F, R> {
-        R apply(A a, B b, C c, D d, E e, F f);
-    }
-
     /* @Henok Hussen Hamza
      *Query 1
      *       ----------

@@ -2,14 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'MppProject'
 version '1.0-SNAPSHOT'
 
-
-bootJar {
-    baseName = 'MPPProject'
-    version =  '0.1.0'
-}
 sourceCompatibility = 1.8
 
 repositories {
