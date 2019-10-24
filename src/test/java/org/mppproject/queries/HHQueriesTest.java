@@ -13,10 +13,6 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-
-//import static org.junit.jupiter.api.Assertions.*;
-
-
 public class HHQueriesTest {
 
     HHHQueries hh= new HHHQueries();
@@ -140,8 +136,6 @@ public class HHQueriesTest {
         List<String> expected = new ArrayList<String>() {
 
             {
-
-
             }
         };
         assertEquals(expected,hh.getCustomersWithDiffCity( mockedCustomerList,mockedSalesmanList));
@@ -155,6 +149,8 @@ public class HHQueriesTest {
             {
                 add("Phone : 300.0,\n");
                 add("laptop : 100.0,\n");
+                add("Teff : 100.0,\n");
+
             }
         };
         assertEquals(expected,hh.gettopFiveCurrentOrderedItems( mockedCustomerList,mockedOrderList));

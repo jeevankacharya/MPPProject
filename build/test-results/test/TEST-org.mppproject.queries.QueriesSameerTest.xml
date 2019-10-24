@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.mppproject.queries.QueriesSameerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-10-24T03:09:40" hostname="hhh-SVF14213SAW" time="0.017">
+<testsuite name="org.mppproject.queries.QueriesSameerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-10-24T05:48:39" hostname="hhh-SVF14213SAW" time="0.02">
   <properties/>
-  <testcase name="customerWithLessGrade" classname="org.mppproject.queries.QueriesSameerTest" time="0.006"/>
-  <testcase name="customerWithMoreThanOneOrder" classname="org.mppproject.queries.QueriesSameerTest" time="0.004"/>
-  <testcase name="topKItemsOrderedByCustomers" classname="org.mppproject.queries.QueriesSameerTest" time="0.005"/>
+  <testcase name="customerWithLessGrade" classname="org.mppproject.queries.QueriesSameerTest" time="0.007"/>
+  <testcase name="customerWithMoreThanOneOrder" classname="org.mppproject.queries.QueriesSameerTest" time="0.006"/>
+  <testcase name="topKItemsOrderedByCustomers" classname="org.mppproject.queries.QueriesSameerTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

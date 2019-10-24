@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.mppproject.queries.QueriesAmitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-10-24T03:09:40" hostname="hhh-SVF14213SAW" time="0.014">
+<testsuite name="org.mppproject.queries.QueriesAmitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-10-24T05:48:39" hostname="hhh-SVF14213SAW" time="0.023">
   <properties/>
-  <testcase name="getTotalSalesmenPerCityTest" classname="org.mppproject.queries.QueriesAmitTest" time="0.008"/>
-  <testcase name="getCustomersAndSalesmenSameCityTest" classname="org.mppproject.queries.QueriesAmitTest" time="0.002"/>
-  <testcase name="uniqueCustomersPerCityTest" classname="org.mppproject.queries.QueriesAmitTest" time="0.002"/>
+  <testcase name="getTotalSalesmenPerCityTest" classname="org.mppproject.queries.QueriesAmitTest" time="0.014"/>
+  <testcase name="getCustomersAndSalesmenSameCityTest" classname="org.mppproject.queries.QueriesAmitTest" time="0.003"/>
+  <testcase name="uniqueCustomersPerCityTest" classname="org.mppproject.queries.QueriesAmitTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

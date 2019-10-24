@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.mppproject.queries.HHQueriesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-10-24T03:09:40" hostname="hhh-SVF14213SAW" time="0.042">
+<testsuite name="org.mppproject.queries.HHQueriesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-10-24T05:48:39" hostname="hhh-SVF14213SAW" time="0.042">
   <properties/>
-  <testcase name="getCustomersPerCityTest" classname="org.mppproject.queries.HHQueriesTest" time="0.009"/>
-  <testcase name="gettopFiveCurrentOrderedItems" classname="org.mppproject.queries.HHQueriesTest" time="0.009"/>
-  <testcase name="getCustomersWithDiffCity" classname="org.mppproject.queries.HHQueriesTest" time="0.003"/>
-  <testcase name="geteachCityTopItem" classname="org.mppproject.queries.HHQueriesTest" time="0.021"/>
+  <testcase name="getCustomersPerCityTest" classname="org.mppproject.queries.HHQueriesTest" time="0.01"/>
+  <testcase name="gettopFiveCurrentOrderedItems" classname="org.mppproject.queries.HHQueriesTest" time="0.012"/>
+  <testcase name="getCustomersWithDiffCity" classname="org.mppproject.queries.HHQueriesTest" time="0.005"/>
+  <testcase name="geteachCityTopItem" classname="org.mppproject.queries.HHQueriesTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

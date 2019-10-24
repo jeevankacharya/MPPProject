@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.mppproject.queries.MyFunctionsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-24T03:09:40" hostname="hhh-SVF14213SAW" time="0.038">
+<testsuite name="org.mppproject.queries.MyFunctionsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-24T05:48:39" hostname="hhh-SVF14213SAW" time="0.043">
   <properties/>
-  <testcase name="testListOfSalesmenWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.02"/>
+  <testcase name="testListOfSalesmenWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.024"/>
   <testcase name="testTotalItemsPrice" classname="org.mppproject.queries.MyFunctionsTest" time="0.003"/>
-  <testcase name="testsalemenWithCustomers" classname="org.mppproject.queries.MyFunctionsTest" time="0.004"/>
-  <testcase name="testListOfCustomersWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.0"/>
-  <testcase name="testOrderIsBetweenAgivenRange" classname="org.mppproject.queries.MyFunctionsTest" time="0.0"/>
+  <testcase name="testsalemenWithCustomers" classname="org.mppproject.queries.MyFunctionsTest" time="0.005"/>
+  <testcase name="testListOfCustomersWhoHaveMoreThanOneOrder" classname="org.mppproject.queries.MyFunctionsTest" time="0.001"/>
+  <testcase name="testOrderIsBetweenAgivenRange" classname="org.mppproject.queries.MyFunctionsTest" time="0.001"/>
   <testcase name="testListOfCustomerDetailsWhoQualify" classname="org.mppproject.queries.MyFunctionsTest" time="0.004"/>
-  <testcase name="testSortedCustomersAndThereSalesmen" classname="org.mppproject.queries.MyFunctionsTest" time="0.002"/>
+  <testcase name="testSortedCustomersAndThereSalesmen" classname="org.mppproject.queries.MyFunctionsTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
