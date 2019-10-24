@@ -17,15 +17,15 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class MyFunctionsTest {
-    private static List<Salesman> salesmen = new ArrayList<>();
-    private static List<Item> items = new ArrayList<>();
-    private static List<Item> items2 = new ArrayList<>();
-    private static List<Item> items3 = new ArrayList<>();
-    private static List<Customer> customers = new ArrayList<>();
-    private static List<Order> orders = new ArrayList<>();
+    private  List<Salesman> salesmen = new ArrayList<>();
+    private  List<Item> items = new ArrayList<>();
+    private  List<Item> items2 = new ArrayList<>();
+    private  List<Item> items3 = new ArrayList<>();
+    private  List<Customer> customers = new ArrayList<>();
+    private  List<Order> orders = new ArrayList<>();
 
     @Before
-    public void data() {
+    public void init() {
         salesmen.add(new Salesman(1, "jon", "fairfield", 222.2));
         salesmen.add(new Salesman(2, "jean", "fair", 922.2));
         salesmen.add(new Salesman(3, "jef", "carlifonia", 232.2));

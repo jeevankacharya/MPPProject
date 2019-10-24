@@ -47,13 +47,11 @@ public class QueriesSameerTest {
     List<Item> itemList3 = new ArrayList<Item>() {
         {
             add(item5);
-            add(item1);
         }
     };
     List<Item> itemList4 = new ArrayList<Item>() {
         {
             add(item2);
-            add(item5);
         }
     };
 
@@ -118,8 +116,7 @@ public class QueriesSameerTest {
         List<String> result3 = new ArrayList<String>() {
             {
                 add("Potatoes");
-                add("Noodles");
-
+                add("Chicken");
 
             }
         };

@@ -13,46 +13,46 @@ import static org.junit.Assert.*;
 
 public class QueriesJeevanTest {
 
-    private static Salesman salesman1 = new Salesman(5001, "James Hong", "New York", 0.15);
-    private static Salesman salesman2 = new Salesman(5002, "Adam BC", "London", 0.12);
+    private  Salesman salesman1 = new Salesman(5001, "James Hong", "New York", 0.15);
+    private  Salesman salesman2 = new Salesman(5002, "Adam BC", "London", 0.12);
 
 
-    private static Customer customer1 = new Customer(3002, "Jeevan", "New York", "100", salesman1);
-    private static Customer customer2 = new Customer(3003, "Thanos", "New York", "100", salesman2);
+    private  Customer customer1 = new Customer(3002, "Jeevan", "New York", "100", salesman1);
+    private  Customer customer2 = new Customer(3003, "Thanos", "New York", "100", salesman2);
 
 
-    private static Item item1 = new Item(1001, "Noodles", 20);
-    private static Item item2 = new Item(1002, "Laptop", 10);
+    private  Item item1 = new Item(1001, "Noodles", 20);
+    private  Item item2 = new Item(1002, "Laptop", 10);
 
-    private static List<Item> itemList1 = new ArrayList<Item>() {
+    private  List<Item> itemList1 = new ArrayList<Item>() {
         {
             add(item1);
             add(item2);
         }
     };
-    private static List<Item> itemList2 = new ArrayList<Item>() {
+    private  List<Item> itemList2 = new ArrayList<Item>() {
         {
         }
     };
 
 
-    private static Order order1 = new Order(1, customer1, salesman1, LocalDate.of(2012, 2, 21), itemList1);
-    private static Order order2 = new Order(2, customer2, salesman2, LocalDate.of(2012, 2, 21), itemList2);
+    private  Order order1 = new Order(1, customer1, salesman1, LocalDate.of(2012, 2, 21), itemList1);
+    private  Order order2 = new Order(2, customer2, salesman2, LocalDate.of(2012, 2, 21), itemList2);
 
-    static List<Customer> customerList = new ArrayList<Customer>() {
+     List<Customer> customerList = new ArrayList<Customer>() {
         {
             add(customer1);
             add(customer2);
         }
     };
 
-    static List<Salesman> salesmanList = new ArrayList<Salesman>() {
+     List<Salesman> salesmanList = new ArrayList<Salesman>() {
         {
             add(salesman1);
             add(salesman2);
         }
     };
-    static List<Order> orderList = new ArrayList<Order>() {
+     List<Order> orderList = new ArrayList<Order>() {
         {
             add(order1);
             add(order2);

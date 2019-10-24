@@ -90,7 +90,7 @@ public class HHHQueries {
                                     .filter(i1 -> i1.getPrice() > 50)))
                     .sorted((e1, e2) -> (int) e2.getPrice() - (int) e1.getPrice())
                     .map(i1 -> (i1.getName() + " : " + i1.getPrice() + ",\n")).distinct()
-                    .limit(5)
+                    .limit(2)
                     .collect(Collectors.toList());
 
 
